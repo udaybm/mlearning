@@ -1,5 +1,6 @@
 #responsible for creating ml application as a package that can be installed and used
-from setuptools import find_packages,setup #find_packages auto find all ml appln in the dir we have created
+#find_packages auto find all ml appln in the dir we have created
+from setuptools import find_packages,setup 
 from typing import List
 
 HYPHEN_E_DOT='-e .'

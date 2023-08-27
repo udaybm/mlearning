@@ -1,6 +1,7 @@
-import sys #for pyton runtime env. any runtime info is available in this library
-#error_detail is present in sys.
-import logging
+import sys 
+#for pyton runtime env. any runtime info is available in this library
+#error_detail is present in sys. logger is present in src/
+from logger import logging #add for updating exception in loggers
 
 def error_message_detail(error,error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()
@@ -16,12 +17,14 @@ class CustomException(Exception):
     
     def __str__(self):
         return self.error_message
-    
+
+
+#included for running only 
 if __name__=="__main__":
     
     try:
         a=1/0
     except Exception as e:
-        logging.info("Logging has started. Divide by zero error")
+        logging.info(" Divide by zero error")
         raise CustomException(e,sys)
         
