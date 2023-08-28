@@ -13,6 +13,7 @@ logging.basicConfig(
     format="[%(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s",level=logging.INFO,
 )
 
-#included for running only 
+#included for running/testing only 
+
 if __name__=="__main__":
     logging.info("Logging has started")

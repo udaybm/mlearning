@@ -1,7 +1,7 @@
 import sys 
 #for pyton runtime env. any runtime info is available in this library
 #error_detail is present in sys. logger is present in src/
-from logger import logging #add for updating exception in loggers
+from src.logger import logging #add for updating exception in loggers
 
 def error_message_detail(error,error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()
@@ -19,7 +19,8 @@ class CustomException(Exception):
         return self.error_message
 
 
-#included for running only 
+#included for running/testing only 
+
 if __name__=="__main__":
     
     try:
