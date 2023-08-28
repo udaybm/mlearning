@@ -3,14 +3,18 @@ import sys
 from src.exception import CustomException
 from src.logger import logging 
 import pandas as pd #inorder to work with data frame
+
+#Data Ingestion
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass #used to create class variables
 
+#Data Transformer
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
 
-#from src.components.model_trainer import ModelTrainerConfig
-#from src.components.model_trainer import ModelTrainer
+#Model training
+from src.components.model_trainer import ModelTrainerConfig
+from src.components.model_trainer import ModelTrainer
 
 #create a class for saving the data that is acquired create the class DataIngestionConfig
 #@dataclass is a decorater introduced in py3.7 that are primarily used to store data. It auto generates special methods like
@@ -61,7 +65,6 @@ if __name__=="__main__":
     
     data_transformation=DataTransformation()
     train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
-    '''
+    
     modeltrainer=ModelTrainer()
     print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
-    '''
