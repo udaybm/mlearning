@@ -6,6 +6,7 @@ scikit-learn
 catboost
 xgboost
 dill
+Flask
 #-e .
 #commenting because pip install -r requirements.txt gives error
 #pip install -e . -r requirements #tried this to resolve ..failed
